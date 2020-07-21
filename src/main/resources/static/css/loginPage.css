@@ -1,0 +1,32 @@
+input[type="text"].border_button_grey
+{
+    border: 0;
+    border-bottom: 1px solid #cac3c2;
+    size : 1000px,
+    outline: 0;
+}
+
+.input-size {
+	width:1000px;
+}
+
+.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  font-size : 40px;
+  color : white;
+  text-shadow: 2px 2px #c6a198;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+body {
+	background-color : #f9e6e1;
+}

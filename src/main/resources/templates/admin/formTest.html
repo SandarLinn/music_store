@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+  layout:decorate="~{adminLayout.html}">
+<head>
+<title>form test</title>
+</head>
+<body>
+ <section layout:fragment="custom-content">
+   	<div class="card">
+   		<div class="card-body">
+   			 <div class="row">
+		       	<div class="col">
+		       		<form action="#" th:action="@{/formTest}" th:object="${personForm}" method="post">
+		       			<div class="row">
+		       				<div class="col-md-3">
+		       					Name:
+		       				</div>
+		       				<div class="col-md-9">
+		       					<input type="text" class="form-control" th:classappend="${#fields.hasErrors('name')} ? is-invalid : null " th:field="*{name}" id="name" placeholder="Name">
+		       					<small th:if="${#fields.hasErrors('name')}" class="text-danger" th:errors="*{name}">Name Error</small>
+		       				</div>
+		       			</div>
+		       			<div class="row mt-3">
+		       				<div class="col-md-3">
+		       					Age:
+		       				</div>
+		       				<div class="col-md-9">
+		       					<input type="text" class="form-control" th:classappend="${#fields.hasErrors('age')} ? is-invalid : null " th:field="*{age}" id="age" placeholder="Age">
+		       					<small th:if="${#fields.hasErrors('age')}" class="text-danger" th:errors="*{age}">Age Error</small>
+		       				</div>
+		       			</div>
+		       			<div class="row">
+		       				<div class="col">
+								<button type="submit" class="btn btn-primary">Submit</button>
+		       				</div>
+		       			</div>
+		       		</form>
+		       	</div>
+     		</div>
+   		</div>
+   	</div>
+  </section>  
+ </body>
+</html>   

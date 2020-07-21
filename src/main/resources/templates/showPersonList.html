@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+  layout:decorate="~{adminLayout.html}">
+<head>
+<title>Layout Dialect Example</title>
+</head>
+<body>
+    <section layout:fragment="custom-content">
+    	<div class="row">
+	 		<div class="col">
+	 			<div th:if="${variable?.#session.getAttribute('personSuccess')}" >
+	 				<div class="alert alert-success" role="alert">
+	 					<div th:text="${#session.getAttribute('personSuccess')}"></div>
+					</div>
+	 			</div>
+	 		</div>
+	 	</div>
+    	<div class="card">
+    		<div class="card-body">
+    			<div class="row">
+    				<div class="col text-right">
+    					<a th:href="@{/formTest}" class="btn btn-primary">Add New</a>
+    				</div>
+    			</div>
+    			<div class="row pt-3">
+        			<div class="col">
+	        		<table class="table table-striped">
+						  <thead>
+						    <tr>
+						      <th scope="col">Name</th>
+						      <th scope="col">Age</th>
+						      <th scope="col"></th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr th:each="person: ${persons}">
+						      <td th:text="${person.name}"></td>
+						      <td th:text="${person.age}"></td>
+						      <td class="text-right"><a th:href="@{'/updatePerson/' + ${person.id}}">Edit</a></td>
+						    </tr>
+						  </tbody>
+						</table>
+        			</div>
+       			 </div>
+    		</div>
+    	</div>
+    </section>
+</body>
+</html>

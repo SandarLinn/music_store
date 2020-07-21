@@ -1,0 +1,96 @@
+.top_info_bg_color {
+    background-color : #432f31;
+  }
+
+  .sub_footer_info_bg_color {
+    background-color : #555555;
+  }
+  .footer_info_bg_color {
+    background-color : #000000;
+  }
+
+  hr.footer {
+    
+    border-top: 1px solid #6c757d;
+  }
+  
+  .nav_text_color {
+    color : #929292;
+  }
+  .centered {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+  }
+
+  .info-title {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    text-shadow: 2px 2px #ABA7A5;
+    transform: translate(-50%, -50%);
+  }
+
+  .btn-search-style {
+      background-color: #1b65b3;
+      display: block;
+      width:100%;
+      height: 100%;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      
+      cursor: pointer;
+    
+  }
+
+  .btn-reward-style {
+    background-color: #ffffff;
+    display: block;
+    width:100%;
+    height: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color : black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  
+}
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    z-index:999;
+    background-color:white;
+    left:0;
+    width: 100%;
+  }
+  .header{
+    background: #ffff;
+  }
+  
+
+  .recommand-title-margin{
+    margin-top: 90px;
+  }
+
+  .price-style{
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
