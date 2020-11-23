@@ -45,7 +45,7 @@ public class PersonController {
 		for(Person person : persons){
 			names += person.getName() +"\n";
 		}
-		
+		System.out.println("sandar linn");
 		
 		int result = jdbcTemplate.queryForObject(
 			    "SELECT COUNT(*) FROM PERSON", Integer.class);
